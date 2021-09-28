@@ -10,6 +10,5 @@ class conexion {
 
 }
 
-$conexionFinal = conexion::conexionDB();
 ?>
 
