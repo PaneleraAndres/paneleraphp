@@ -1,8 +1,13 @@
+
+
 <?php
 
   include_once './conexion.php'; 
-           
-       $result = $conexionFinal->query("select * from person");
+       
+        $conexion = new conexion();
+        $getConexion = $conexion->getConexion();
+  
+       $result = $getConexion->query("select * from person");
        
        
        foreach ($result as $value) {
