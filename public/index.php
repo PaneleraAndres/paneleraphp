@@ -1,6 +1,6 @@
 <?php
 
-  include_once './conexion.php'; 
+  include_once './dataBase/conexion.php'; 
           
        $conexionFinal = conexion::conexionDB();
        $result = $conexionFinal->query("select * from person");
