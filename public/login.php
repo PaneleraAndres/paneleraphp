@@ -19,19 +19,21 @@ and open the template in the editor.
                 <form class=" shadow-lg p-3 mb-5 bg-body rounded w-75 mx-auto" style="" action="" method="POST">
                     <div class="mb-3">
                         <label for="InputUser" class="form-label">Usuario</label>
-                        <input type="text" class="form-control" id="InputUser" >
+                        <input type="text" class="form-control" id="InputUser" name="user">
                         
                     </div>
                     <div class="mb-3">
                         <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
+                        <input type="password" class="form-control" id="exampleInputPassword1" name="pass">
                     </div>
                     
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-                <?Php
-                    include_once './dataBase/conexion.php';
-                    $conexion = new conexion();
+                <?php
+                   include './controllers/loginController.php';
+                   if(!empty($_POST)){
+                   logear($_POST['user'], $_POST['pass']);
+                   }
                 ?>
             </div>
         </div>
