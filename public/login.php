@@ -30,7 +30,8 @@ and open the template in the editor.
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
                 <?Php
-
+                    include_once './dataBase/conexion.php';
+                    $conexion = new conexion();
                 ?>
             </div>
         </div>
